@@ -28,14 +28,14 @@ const Home = () => {
     const category = categoryId > 0 ? `category=${categoryId}` : "";
     const search = searchValue ? `&title=*${searchValue}` : "";
 
-    // axios
-    //   .get(
-    //     `https://d3747f715f279136.mokky.dev/pizzas?sortBy=${order}${sortBy}&${category}${search}&page=${currentPage}&limit=4`
-    //   )
-    //   .then((res) => {
-    //     setItems(res.data.items);
-    //     setIsLoading(false);
-    //   });
+    axios
+      .get(
+        `https://d3747f715f279136.mokky.dev/pizzas?sortBy=${order}${sortBy}&${category}${search}&page=${currentPage}&limit=4`
+      )
+      .then((res) => {
+        setItems(res.data.items);
+        setIsLoading(false);
+      });
     window.scrollTo(0, 0);
   }, [categoryId, sort, searchValue, currentPage]);
 
