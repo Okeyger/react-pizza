@@ -13,7 +13,6 @@ import PizzaBlock from "../components/PizzaBlock";
 import Skeleton from "../components/PizzaBlock/Skeleton";
 import Pagination from "../components/Pagination";
 import { SearchContext } from "../App";
-import { current } from "@reduxjs/toolkit";
 
 const Home = () => {
   const dispatch = useDispatch();
